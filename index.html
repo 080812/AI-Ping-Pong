@@ -22,11 +22,27 @@
             <h3>AI Ping-Pong</h3>
             <button class="btn btn-info" data-toggle="modal" data-target="#mymodal">Instructions</button>
         </div><br><br>
-        <button class="btn btn-success" onclick="startgame()" id="start">Play Game</button><br><br>
+        <button class="btn btn-success" onclick="startgame()" id="start">Play Game</button> &nbsp;
+        <button class="btn btn-danger" onclick="restartgame()" id="restart">Restart Game</button><br><br>
         <h3 id="status" class="btn btn-warning"></h3><br><br>
         <div id="canvas"></div>
-    </center>
 
+        <div id="mymodal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4>Instructions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Instructions are move your wrist up or down to make the paddle hit the pong up or down & move
+                            your wrist right or left to make the paddle hit the pong left or right.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+<div class="copyrightfooter">Developed By Taneisha</div>
     <script src="main.js"></script>
 </body>
 

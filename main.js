@@ -1,4 +1,5 @@
-
+RWX=0
+LWY=0
 /*created by prashant shukla */
 
 var paddle2 =10,paddle1=10;
@@ -11,6 +12,7 @@ var paddle1Y;
 
 var  playerscore =0;
 var audio1;
+
 var pcscore =0;
 //ball x and y and speedx speed y and radius
 var ball = {
@@ -22,13 +24,30 @@ var ball = {
 }
 
 function setup(){
-  canvas =  createCanvas(700,600);
+  canvas = createCanvas(700,600);
+  canvas.center()
+  canvas.parent('canvas')
+  video=createCapture(VIDEO)
+  poseNet=ml5.poseNet(video,modelLoaded)
+  poseNet.on('pose',gotPoses)
+  
+}
+
+function modelLoaded(){
+  console.log('model is loaded')
+}
+
+function gotPoses(results){
+  if(results.length>0){
+    console.log(results)
+  }
   
 }
 
 
-function draw(){
 
+function draw(){
+image(video,0,0,700,600)
  background(0); 
 
  fill("black");

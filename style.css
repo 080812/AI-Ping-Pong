@@ -11,3 +11,13 @@
 .heading button{
     float: right;
 }
+
+.copyrightfooter{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    color: aquamarine;
+    background-color: palevioletred;
+    text-align: center;
+}
