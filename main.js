@@ -28,7 +28,7 @@ scoreRightWrist = 0;
 status = "";
 
 function preload() {
-  ball_touch = loadSound("ball_touch_paddle.wav")
+  ball_touch = loadSound("ball_touch_paddel.wav")
   ball_miss = loadSound("missed.wav")
 }
 
